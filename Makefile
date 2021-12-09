@@ -4,7 +4,7 @@ LIBFT			=	$(LIBFT_PATH)/libft.a
 MINILIBX_PATH	=	./libraries/minilibx
 MINILIBX		=	$(MINILIBX_PATH)/libmlx.a
 
-SOURCES_FILES	=	so_long.c
+SOURCES_FILES	=	fractals_math.c mlx_manager.c
 #map_gen.c map_check.c map_init.c
 #SOURCES_FILES	+=	game_init.c game_utils.c img_init.c img_draw.c map_update.c
 #SOURCES_FILES	+=	hold_key.c map_init_utils.c map_update_utils.c free_fire.c
@@ -28,8 +28,7 @@ BONUS_DIR		=	sources_bonus
 
 OBJ_DIR			=	objects
 
-HEADER			=	$(SOURCES_DIR)/so_long.h
-HEADER_BONUS	=	$(BONUS_DIR)/so_long_bonus.h
+HEADER			=	$(SOURCES_DIR)/includes/fractol.h
 
 SOURCES			=	$(addprefix $(SOURCES_DIR)/, $(SOURCES_FILES))
 BONUS_FILES		=	$(addprefix $(BONUS_DIR)/, $(SOURCES_BONUS))
@@ -37,8 +36,7 @@ BONUS_FILES		=	$(addprefix $(BONUS_DIR)/, $(SOURCES_BONUS))
 OBJECTS			=	$(SOURCES:$(SOURCES_DIR)/%.c=$(OBJ_DIR)/%.o)
 OBJECTS_BONUS	=	$(BONUS_FILES:$(BONUS_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-NAME			=	so_long
-NAME_BONUS		=	so_long_bonus
+NAME			=	fractol
 
 CC				=	clang
 RM				=	rm -rf
@@ -58,7 +56,7 @@ bonus:				$(NAME_BONUS)
 
 $(NAME):			$(LIBFT) $(OBJ_DIR) $(MINILIBX) $(OBJECTS) $(HEADER)
 					$(CC) $(CFLAGS) $(OBJECTS) $(LIBFT) $(MINILIBX) \
-					$(MLXFLAGS) -o $(NAME)
+					$(MLXFLAGS) -lm -o $(NAME)
 
 $(NAME_BONUS):		$(LIBFT) $(OBJ_DIR) $(MINILIBX) $(OBJECTS_BONUS) \
 					$(HEADER_BONUS)

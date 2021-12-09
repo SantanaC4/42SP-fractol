@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   mlx_manager.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edrodrig <edrodrig@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/03 21:32:15 by edrodrig          #+#    #+#             */
-/*   Updated: 2021/12/03 21:35:28 by edrodrig         ###   ########.fr       */
+/*   Created: 2021/12/08 09:13:14 by edrodrig          #+#    #+#             */
+/*   Updated: 2021/12/08 09:13:38 by edrodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
 
-# include "../libraries/libft/libft.h"
-# include "../libraries/minilibx/mlx.h"
+long double ft_map(long double x, long double in_min, long double in_max, long double out_min, long double out_max)
+{
+	long double ret;
+	long double a;
+	long double b;
 
-#endif
+	a = (out_min - out_max) / (in_min - in_max);
+	b = ((out_max * in_min) - in_max * out_min) / (in_min - in_max);
+
+	ret = a*x + b;
+
+	return ret;
+}
