@@ -6,11 +6,12 @@
 /*   By: edrodrig <edrodrig@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 21:27:18 by edrodrig          #+#    #+#             */
-/*   Updated: 2021/12/20 20:13:57 by edrodrig         ###   ########.fr       */
+/*   Updated: 2022/01/09 12:54:36 by edrodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/fractol.h"
+
 
 typedef struct	s_data {
 	void	*mlx;
