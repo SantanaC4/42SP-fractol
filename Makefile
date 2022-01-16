@@ -1,7 +1,7 @@
-LIBFT_PATH		=	./libraries/libft
+LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a
 
-MINILIBX_PATH	=	./libraries/minilibx
+MINILIBX_PATH	=	./minilibx
 MINILIBX		=	$(MINILIBX_PATH)/libmlx.a
 
 SOURCES_FILES	=	fractals_math.c fractol_math.c mlx_manager.c gen_img.c hooks.c color.c
