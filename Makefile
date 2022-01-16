@@ -4,14 +4,14 @@ LIBFT			=	$(LIBFT_PATH)/libft.a
 MINILIBX_PATH	=	./libraries/minilibx
 MINILIBX		=	$(MINILIBX_PATH)/libmlx.a
 
-SOURCES_FILES	=	fractals_math.c mlx_manager.c
+SOURCES_FILES	=	fractals_math.c fractol_math.c mlx_manager.c gen_img.c hooks.c color.c
 
 SOURCES_DIR		=	sources
 BONUS_DIR		=	sources_bonus
 
 OBJ_DIR			=	objects
 
-HEADER			=	$(SOURCES_DIR)/includes/fractol.h
+HEADER			=	./includes/fractol.h
 
 SOURCES			=	$(addprefix $(SOURCES_DIR)/, $(SOURCES_FILES))
 BONUS_FILES		=	$(addprefix $(BONUS_DIR)/, $(SOURCES_BONUS))

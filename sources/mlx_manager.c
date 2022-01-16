@@ -6,17 +6,52 @@
 /*   By: edrodrig <edrodrig@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 09:13:14 by edrodrig          #+#    #+#             */
-/*   Updated: 2021/12/08 09:13:38 by edrodrig         ###   ########.fr       */
+/*   Updated: 2022/01/16 15:26:30 by edrodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/fractol.h"
 
-long double ft_map(long double x, long double in_min, long double in_max, long double out_min, long double out_max)
+void init_img(t_data *img)
 {
-	long double ret;
-	long double a;
-	long double b;
+	img->img = mlx_new_image(img->mlx, WIDTH, HEIGHT);
+	img->addr = (int *)mlx_get_data_addr(img->img, &img->bits_per_pixel, &img->line_length, &img->endian);
+}
 
+int setup_env(t_data *img)
+{
+	img->mlx = mlx_init();
+	if (!(img->mlx))
+	{
+		perror("mlx_init error");
+		exit(0);
+	}
+	img->mlx_win = mlx_new_window(img->mlx, WIDTH, HEIGHT, "Hello world!");
+	return (0);
+}
+
+void run_window(t_data *img)
+{
+	mlx_mouse_hook(img->mlx_win, get_zoom, img);
+	mlx_key_hook(img->mlx_win, select_key, img);
+	mlx_loop(img->mlx);
+}
+
+int expose_hook(t_data *img)
+{
+	mlx_do_sync(img->mlx);
+	mlx_put_image_to_window(img->mlx, img->mlx_win, img->img, 0, 0);
+	return (0);
+}
+
+double ft_map(double x, double in_max, double out_min, double out_max)
+{
+	double ret;
+	double a;
+	double b;
+	double in_min;
+
+	in_min = 0;
 	a = (out_min - out_max) / (in_min - in_max);
 	b = ((out_max * in_min) - in_max * out_min) / (in_min - in_max);
 
