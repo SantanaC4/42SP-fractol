@@ -34,11 +34,13 @@ viewed. If no parameter is provided, or if the parameter is invalid, the program
 displays a list of available parameters and exits properly.
 
 
-## Reference
+## References
 
-### Fractol
+### Fractol: Mandelbrot
 
 https://www.youtube.com/watch?v=fAsaSkmbF5s&t=445s
+
+### Fractol: Julia
 https://www.youtube.com/watch?v=6z7GQewK-Ks&t=24s
 
 ### Colors
