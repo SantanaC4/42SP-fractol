@@ -25,12 +25,12 @@
 
 typedef struct s_env
 {
-	double				zoom;
+	double_t				zoom;
 	float				infinity;
-	double				min_x;
-	double				max_x;
-	double				min_y;
-	double				max_y;
+	double_t				min_x;
+	double_t				max_x;
+	double_t				min_y;
+	double_t				max_y;
 	int					iteration;
 }		t_env;
 
@@ -48,15 +48,15 @@ typedef struct s_data
 	t_env	e;
 	char	**argv;
 	char	type;
-	float	*complex_number;
+	double_t	*complex_number;
 }				t_data;
 
 /*Function to map one range to another */
-double	ft_map(double x, double in_max, double out_min, double out_max);
+double_t	ft_map(double_t x, double_t in_max, double_t out_min, double_t out_max);
 
 /*Compute mandelbrot*/
 int		mandelbrot_math(t_env *e, int x, int y);
-int		julia_math(t_env *e, int x, int y, float *complex_number);
+int		julia_math(t_env *e, int x, int y, double_t *complex_number);
 
 /*Get mouse hooks to zooming the image*/
 int		get_zoom(int key, int x, int y, t_data *img);

@@ -26,7 +26,7 @@ static void	error_handler(int argc, char *argv[])
 		{
 			printf("\nTHE COMPLEX NUMBER MUST BE GIVEN IN TWO\
 					SEPARATE ARGUMENTS.\n");
-			printf("                (ex: julia -0.73 0.14).\n");
+			printf("                (ex: julia -0.70176 -0.3842).\n");
 			printf("THE FIRST NUMBER -0.73 IS THE REAL PART (+0.0 OR -0.0)\n");
 			printf("AND THE SECOND NUMBER 0.14 IS THE IMAGINARY\
 					 PART(+0.0 OR -0.0).\n");

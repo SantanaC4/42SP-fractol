@@ -12,13 +12,13 @@
 
 #include "../includes/fractol.h"
 
-int		mandelbrot_math(t_env *e, int x, int y)
+int	mandelbrot_math(t_env *e, int x, int y)
 {
-	double	mx;
-	double	my;
-	double	c_im;
-	double	c_re;
-	double	x_temp;
+	double_t	mx;
+	double_t	my;
+	double_t	c_im;
+	double_t	c_re;
+	double_t	x_temp;
 
 	e->iteration = 0;
 	mx = ft_map(x, WIDTH, e->min_x, e->max_x);
@@ -37,11 +37,11 @@ int		mandelbrot_math(t_env *e, int x, int y)
 	return (e->iteration);
 }
 
-int		julia_math(t_env *e, int x, int y, float *complex_number)
+int	julia_math(t_env *e, int x, int y, double_t *complex_number)
 {
-	double	mx;
-	double	my;
-	double	x_temp;
+	double_t	mx;
+	double_t	my;
+	double_t	x_temp;
 
 	e->iteration = 0;
 	mx = ft_map(x, WIDTH, e->min_x, e->max_x);
