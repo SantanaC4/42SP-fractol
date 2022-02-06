@@ -34,6 +34,16 @@ viewed. If no parameter is provided, or if the parameter is invalid, the program
 displays a list of available parameters and exits properly.
 
 
+## Reference
+
+### Fractol
+https://www.youtube.com/watch?v=6z7GQewK-Ks&t=24s
+
+### Colors
+
+[https://theses.liacs.nl/pdf/2018-2019-JonckheereLSde.pdf](url)
+https://theses.liacs.nl/pdf/2018-2019-JonckheereLSde.pdf
+
 ## Requirements
 
 ### Minilibx
@@ -69,7 +79,4 @@ Avaliable sets:
 mandelbrot
 julia
 
-## Reference
-
-[youtube.com/watch?v=6z7GQewK-Ks&t=24s](url)
 
