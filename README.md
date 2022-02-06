@@ -37,6 +37,8 @@ displays a list of available parameters and exits properly.
 ## Reference
 
 ### Fractol
+
+https://www.youtube.com/watch?v=fAsaSkmbF5s&t=445s
 https://www.youtube.com/watch?v=6z7GQewK-Ks&t=24s
 
 ### Colors
