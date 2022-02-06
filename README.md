@@ -69,3 +69,7 @@ Avaliable sets:
 mandelbrot
 julia
 
+## Reference
+
+[youtube.com/watch?v=6z7GQewK-Ks&t=24s](url)
+
