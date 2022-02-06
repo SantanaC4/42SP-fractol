@@ -18,10 +18,10 @@ void	fractol(t_data *img, int iteration)
 	int	x;
 
 	y = 0;
-	img->e.min_x = -2.f * img->e.zoom;
-	img->e.max_x = 2.0f * img->e.zoom;
-	img->e.min_y = -2.0f * img->e.zoom;
-	img->e.max_y = 2.0f * img->e.zoom;
+	img->e.min_max_x[0] = -2.f * img->e.zoom;
+	img->e.min_max_x[1] = 2.0f * img->e.zoom;
+	img->e.min_max_y[0] = -2.0f * img->e.zoom;
+	img->e.min_max_y[1] = 2.0f * img->e.zoom;
 	while (y < HEIGHT)
 	{
 		x = 0;

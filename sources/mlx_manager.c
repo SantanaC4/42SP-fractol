@@ -52,16 +52,16 @@ int	expose_hook(t_data *img)
 	return (0);
 }
 
-double	ft_map(double x, double in_max, double out_min, double out_max)
+double_t	ft_map(double_t x, double_t in_max, double_t out[2])
 {
-	double	ret;
-	double	a;
-	double	b;
-	double	in_min;
+	double_t	ret;
+	double_t	a;
+	double_t	b;
+	double_t	in_min;
 
 	in_min = 0;
-	a = (out_min - out_max) / (in_min - in_max);
-	b = ((out_max * in_min) - in_max * out_min) / (in_min - in_max);
+	a = (out[0] - out[1]) / (in_min - in_max);
+	b = ((out[0] * in_min) - in_max * out[0]) / (in_min - in_max);
 	ret = a * x + b;
 	return (ret);
 }

@@ -14,17 +14,17 @@
 
 int	mandelbrot_math(t_env *e, int x, int y)
 {
-	double_t	mx;
-	double_t	my;
-	double_t	c_im;
-	double_t	c_re;
-	double_t	x_temp;
+	double	mx;
+	double	my;
+	double	c_im;
+	double	c_re;
+	double	x_temp;
 
 	e->iteration = 0;
-	mx = ft_map(x, WIDTH, e->min_x, e->max_x);
-	my = ft_map(y, HEIGHT, e->min_y, e->max_y);
-	c_re = ft_map(x, WIDTH, e->min_x, e->max_x);
-	c_im = ft_map(y, HEIGHT, e->min_y, e->max_y);
+	mx = ft_map(x, WIDTH, e->min_max_x);
+	my = ft_map(y, HEIGHT, e->min_max_y);
+	c_re = ft_map(x, WIDTH, e->min_max_x);
+	c_im = ft_map(y, HEIGHT, e->min_max_y);
 	while (e->iteration < e->infinity)
 	{
 		x_temp = (mx * mx - my * my) + c_re;
@@ -44,8 +44,8 @@ int	julia_math(t_env *e, int x, int y, double_t *complex_number)
 	double_t	x_temp;
 
 	e->iteration = 0;
-	mx = ft_map(x, WIDTH, e->min_x, e->max_x);
-	my = ft_map(y, HEIGHT, e->min_y, e->max_y);
+	mx = ft_map(x, WIDTH, e->min_max_x);
+	my = ft_map(y, HEIGHT, e->min_max_y);
 	while (e->iteration < e->infinity)
 	{
 		x_temp = (mx * mx - my * my) + complex_number[0];
