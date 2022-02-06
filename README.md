@@ -76,7 +76,7 @@ $ make
 
 Execute the software, providing the name of the fractal set and the seed, when necessary:
 ```
-$ ./fractol Julia -0.73 0.14
+$ ./fractol julia -0.73 0.14
 ```
 Avaliable sets:
 ```
