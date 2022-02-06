@@ -1,10 +1,10 @@
-LIBFT_PATH		=	./libft
+LIBFT_PATH		=	./libraries/libft
 LIBFT			=	$(LIBFT_PATH)/libft.a
 
-MINILIBX_PATH	=	./minilibx
+MINILIBX_PATH	=	./libraries/minilibx
 MINILIBX		=	$(MINILIBX_PATH)/libmlx.a
 
-SOURCES_FILES	=	fractals_math.c fractol_math.c mlx_manager.c gen_img.c hooks.c color.c
+SOURCES_FILES	=	main.c fractol_math.c mlx_manager.c gen_img.c hooks.c color.c libft_func.c
 
 SOURCES_DIR		=	sources
 BONUS_DIR		=	sources_bonus
@@ -26,6 +26,7 @@ RM				=	rm -rf
 
 CFLAGS			=	-Wall -Wextra -Werror
 MLXFLAGS		=	-L. -lXext -L. -lX11
+
 
 $(OBJ_DIR)/%.o:		$(SOURCES_DIR)/%.c $(HEADER)
 					$(CC) $(CFLAGS) -c $< -o $@

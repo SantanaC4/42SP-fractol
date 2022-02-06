@@ -12,7 +12,7 @@
 
 #include "../includes/fractol.h"
 
-int select_key(int key, t_data *img)
+int	select_key(int key, t_data *img)
 {
 	if (key == ESCAPE)
 	{
@@ -33,7 +33,7 @@ int	get_zoom(int key, int x, int y, t_data *img)
 		img->e.zoom *= 1.1;
 	img->mouse_hook_x = x;
 	img->mouse_hook_y = y;
-	fractol(img);
+	fractol(img, 0);
 	expose_hook(img);
 	return (0);
 }
