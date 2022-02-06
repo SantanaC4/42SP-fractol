@@ -6,3 +6,7 @@ Fractol is a 42 Project aimed at exploring fractals; mathematical sets that exhi
 ## Mandelbrot set
 
 <img src="https://github.com/SantanaC4/42SP-fractol/blob/main/mandelbrot.png"/>
+
+## Julia set -8.35 -0.2321
+
+<img src="https://github.com/SantanaC4/42SP-fractol/blob/main/julia_-8_35_-0.2321_3.png"/>
