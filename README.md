@@ -34,17 +34,6 @@ viewed. If no parameter is provided, or if the parameter is invalid, the program
 displays a list of available parameters and exits properly.
 
 
-## Bonus
-
-• One more different fractal.
-
-• The zoom follows the actual mouse position.
-
-• In addition to the zoom: moving with the arrows.
-
-• Make the color range shift.
-
-
 ## Requirements
 
 ### Minilibx
