@@ -6,7 +6,7 @@
 /*   By: edrodrig <edrodrig@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:07:03 by edrodrig          #+#    #+#             */
-/*   Updated: 2022/02/04 23:11:43 by edrodrig         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:40:34 by edrodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	mandelbrot_math(t_env *e, int x, int y)
 	return (e->iteration);
 }
 
-int	julia_math(t_env *e, int x, int y, double_t *complex_number)
+int	julia_math(t_env *e, int x, int y, double_t complex_number[2])
 {
 	double_t	mx;
 	double_t	my;

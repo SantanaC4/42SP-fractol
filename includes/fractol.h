@@ -6,7 +6,7 @@
 /*   By: edrodrig <edrodrig@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 21:32:15 by edrodrig          #+#    #+#             */
-/*   Updated: 2022/02/04 22:38:15 by edrodrig         ###   ########.fr       */
+/*   Updated: 2022/02/11 18:40:12 by edrodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ typedef struct s_data
 	void		*mlx_win;
 	void		*img;
 	t_env		e;
-	double_t	*complex_number;
+	double_t	complex_number[2];
 }	t_data;
 
 /*Function to map one range to another */
@@ -54,7 +54,7 @@ double_t	ft_map(double_t x, double_t in_max, double_t out[2]);
 
 /*Compute mandelbrot*/
 int			mandelbrot_math(t_env *e, int x, int y);
-int			julia_math(t_env *e, int x, int y, double_t *complex_number);
+int			julia_math(t_env *e, int x, int y, double_t complex_number[2]);
 
 /*Get mouse hooks to zooming the image*/
 int			get_zoom(int key, int x, int y, t_data *img);
